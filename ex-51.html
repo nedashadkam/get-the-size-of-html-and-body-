@@ -1,0 +1,47 @@
+<!-- یک برنامه جاوا اسکریپت بنویسید تا عرض و ارتفاع پنجره را به دست آورید هر زمان که تغییر کرد -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        div {
+            background-color: aliceblue;
+            border: 2px dotted darkcyan;
+            width: 23%;
+            padding: 2%;
+            border-radius: 5px;
+            color: darkcyan;
+            margin: 10PX;
+        }
+    </style>
+
+</head>
+
+<body onload="getSize()" onresize="getSize()">
+
+    <div id="whH"></div>
+
+    <div id="whB"></div>
+
+    <script>
+
+        function getSize() {
+
+            let w = document.documentElement.clientWidth;
+            let h = document.documentElement.clientHeight;
+
+            document.getElementById('whH').innerHTML = "<h2>HTML Width: " + w + " px <br> HTML Height: " + h + " px </h2>";
+
+            let ww = document.body.clientWidth;
+            let hh = document.body.clientHeight;
+
+            document.getElementById('whB').innerHTML = "<h2>BODY Width: " + ww + " px <br> BODY Height: " + hh + " px </h2>";
+        }
+
+    </script>
+
+</body>
+
+</html>
